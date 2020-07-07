@@ -1,0 +1,2 @@
+# Libary_System
+ I this project, i focus on ASP .NET cross-platform technology. I used a four-layer architecture so layers name are Entites, DAL,DataAccess and UI, UI layer has MVC Pattern. Also i utilize the Entity Farmework Code First Approach.Admin crud operations,Register,login and update operations, Give Book and Turn Book move operations, Dashboard and statistics, Message operations.Consider the SOLID Prinsiples during project development.

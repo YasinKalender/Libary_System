@@ -1,0 +1,127 @@
+﻿@using PagedList
+@using PagedList.Mvc
+
+@model IPagedList<Libary_System.Entities.ORM.Entities.Concrete.Book>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="container">
+
+    <h2>Book List</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "BookAdd")
+    </p>
+
+    <div class="mb-4">
+
+        @using (Html.BeginForm("Index", "Book", FormMethod.Get))
+        {
+
+            @Html.TextBox("p")
+            <input type="submit"  class="btn btn-primary"/>
+
+        }
+
+    </div>
+
+    <div id="s-table">
+
+        <table class="table table-bordered">
+
+            <thead>
+                <tr>
+
+                    <th>
+                        CategoryName
+                    </th>
+                    <th>
+                        FirstName
+                    </th>
+                    <th>
+                        BookName
+                    </th>
+                    <th>
+                        Publication_Year
+                    </th>
+                    <th>
+                        Publisher
+                    </th>
+
+                    <th>
+                        AddDate
+                    </th>
+                    <th>
+                        DeleteDate
+                    </th>
+                    <th>
+                        UpdateDate
+                    </th>
+                    <th>
+                        AddUser
+                    </th>
+                    <th>
+                        UpdateUser
+                    </th>
+                    <th>Status</th>
+        
+                    <th></th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author.FirstName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.BookName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publication_Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publisher)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.AddDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeleteDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "BookEdit", "Book", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" }) |
+                @Html.ActionLink("Delete", "BookDelete", "Book", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" })
+            </td>
+        </tr>
+            }
+
+        </table>
+
+        @Html.PagedListPager((IPagedList)Model,page=>Url.Action("Index",new {page}))
+
+    </div>
+</div>

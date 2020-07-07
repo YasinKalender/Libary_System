@@ -1,0 +1,17 @@
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\bin\Debug\Libary_System.Business.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\bin\Debug\Libary_System.Business.pdb
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\bin\Debug\Libary_System.DAL.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\bin\Debug\Libary_System.Entities.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\bin\Debug\Libary_System.Repository.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\bin\Debug\EntityFramework.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\bin\Debug\Libary_System.DAL.pdb
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\bin\Debug\Libary_System.DAL.dll.config
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\bin\Debug\Libary_System.Entities.pdb
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\bin\Debug\Libary_System.Repository.pdb
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\bin\Debug\Libary_System.Repository.dll.config
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\bin\Debug\EntityFramework.xml
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\obj\Debug\Libary_System.Business.csprojAssemblyReference.cache
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\obj\Debug\Libary_System.Business.csproj.CoreCompileInputs.cache
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\obj\Debug\Libary_System.Business.csproj.CopyComplete
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\obj\Debug\Libary_System.Business.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Business\obj\Debug\Libary_System.Business.pdb

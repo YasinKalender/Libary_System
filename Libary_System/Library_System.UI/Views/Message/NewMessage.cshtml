@@ -1,0 +1,29 @@
+﻿@model Libary_System.Entities.ORM.Entities.Concrete.Message
+@{
+    ViewBag.Title = "NewMessage";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+    <div class="container">
+
+        <h2>New Message</h2>
+
+
+            <form action="/Message/NewMessage" method="post">
+
+                <label for="Alici">Alici</label>
+                <input type="text"  name="Alici" />
+
+                <label for="Konu">Konu</label>
+                <input type="text" name="Konu" />
+
+                <label for="Icerik">Icerik</label>
+                <textarea id="Icerik" name="Icerik" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+
+
+

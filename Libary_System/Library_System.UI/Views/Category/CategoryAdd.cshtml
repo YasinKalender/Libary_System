@@ -1,0 +1,55 @@
+﻿@model Libary_System.Entities.ORM.Entities.Concrete.Category
+@{
+    ViewBag.Title = "CategoryAdd";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+    <div class="container">
+        <h2 class="mt-2">Category Add</h2>
+
+        @using (Html.BeginForm("CategoryAdd","Category",FormMethod.Post,new {@class="mt-5" }))
+        {
+
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true,"",new { @class="text-danger"})
+
+
+            <div class="form-group">
+
+                <div class="row">
+                    <div class="col-md-2">
+
+                        @Html.LabelFor(i => i.CategoryName)
+
+                    </div>
+
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(i => i.CategoryName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(i => i.CategoryName, "", new { @class = "text-danger" })
+                    </div>
+                    
+
+                </div>
+        
+
+            </div>
+
+            <button type="submit" class="btn btn-dark float-right">Category Add</button>
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+    </div>
+
+
+

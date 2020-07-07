@@ -1,0 +1,14 @@
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\bin\Debug\Libary_System.DAL.dll.config
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\bin\Debug\Libary_System.DAL.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\bin\Debug\Libary_System.DAL.pdb
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\bin\Debug\EntityFramework.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\bin\Debug\Libary_System.Entities.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\bin\Debug\Libary_System.Entities.pdb
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\bin\Debug\EntityFramework.xml
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\obj\Debug\Libary_System.DAL.csprojAssemblyReference.cache
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\obj\Debug\Libary_System.DAL.csproj.CoreCompileInputs.cache
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\obj\Debug\Libary_System.DAL.csproj.CopyComplete
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\obj\Debug\Libary_System.DAL.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.DAL\obj\Debug\Libary_System.DAL.pdb

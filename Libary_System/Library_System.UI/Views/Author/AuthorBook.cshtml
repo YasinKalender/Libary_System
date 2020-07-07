@@ -1,0 +1,46 @@
+﻿@model List<Libary_System.Entities.ORM.Entities.Concrete.Book>
+@{
+    ViewBag.Title = "AuthorBook";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container">
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>Book Name</th>
+                <th>Author</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.BookName</td>
+                    <td>@item.Author.FirstName</td>
+
+
+                </tr>
+            }
+
+
+
+        </tbody>
+
+
+
+
+
+
+    </table>
+
+
+
+
+
+</div>
+

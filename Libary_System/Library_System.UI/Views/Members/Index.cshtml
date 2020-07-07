@@ -1,0 +1,91 @@
+﻿@using PagedList
+@using PagedList.Mvc
+
+
+@model IPagedList<Libary_System.Entities.ORM.Entities.Concrete.Member>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+    <div class="container">
+
+        <h2>Members List</h2>
+
+        @using (Html.BeginForm("Index","Members",FormMethod.Get))
+        {
+
+            <input type="text" name="p" class="form-control" />
+            <button type="submit" class="btn btn-primary">Search</button>
+
+        }
+
+        <a href="/Members/MembersAdd" class="btn btn-dark mb-3">Members Add</a>
+
+        <table class="table table-bordered">
+            <thead>
+
+                <tr>
+
+                    <th>Member Name</th>
+                    <th>Member LastName</th>
+                    <th>UserName</th>
+                    <th>Mail</th>
+                    <th>Password</th>
+                    <th>Add Date</th>
+                    <th>Update Date</th>
+                    <th>Add User</th>
+                    <th>Update User</th>
+                    <th>Status</th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+
+
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+
+
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.Username</td>
+                    <td>@item.Mail</td>
+                    <td>@item.Password</td>
+                    <td>@item.AddDate</td>
+                    <td>@item.UpdateDate</td>
+                    <td>@item.AddUser</td>
+                    <td>@item.UpdateUser</td>
+                    <td>@item.Status</td>
+                    <td>
+                        @Html.ActionLink("Delete", "MembersDelete", "Members", new { id = item.ID }, new { @class = "btn btn-danger btn-sm" })
+                        @Html.ActionLink("Update", "MembersUpdate", "Members", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" })
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Past Book", "PastBook", "Members", new { id = item.ID }, new { @class = "btn btn-danger btn-sm" })
+                    </td>
+
+
+
+
+
+
+                </tr>
+
+                }
+
+            </tbody>
+
+
+        </table>
+
+        @Html.PagedListPager((IPagedList)Model,page=>Url.Action("Index",new {page}))
+
+
+    </div>
+

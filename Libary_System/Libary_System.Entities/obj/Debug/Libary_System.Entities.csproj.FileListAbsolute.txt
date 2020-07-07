@@ -1,0 +1,5 @@
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Entities\bin\Debug\Libary_System.Entities.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Entities\bin\Debug\Libary_System.Entities.pdb
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Entities\obj\Debug\Libary_System.Entities.csproj.CoreCompileInputs.cache
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Entities\obj\Debug\Libary_System.Entities.dll
+C:\Users\YASIN\Desktop\Libary_System\Libary_System.Entities\obj\Debug\Libary_System.Entities.pdb

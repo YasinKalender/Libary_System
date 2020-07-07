@@ -1,0 +1,87 @@
+﻿@model Libary_System.Entities.ORM.Entities.Concrete.Author
+@{
+    ViewBag.Title = "AuthorAdd";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<div class="container">
+
+    <h2>Author Add</h2>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group mt-3">
+
+            <div class="row">
+
+                <div class="col-md-2">
+
+                    @Html.LabelFor(i => i.FirstName)
+
+
+                </div>
+
+                <div class="col-md-10">
+
+                    @Html.TextBoxFor(i => i.FirstName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(i => i.FirstName, "", new { @class = "text-danger" })
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+        <div class="form-group">
+
+            <div class="row">
+
+                <div class="col-md-2">
+
+                    @Html.LabelFor(i => i.LastName)
+
+
+                </div>
+
+                <div class="col-md-10">
+
+                    @Html.TextBoxFor(i => i.LastName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(i => i.LastName, "", new { @class = "text-danger" })
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <a href="/Author/Index" class="btn btn-dark float-right ml-3">Back To List Auhor</a>
+        <button type="submit" class="btn btn-dark float-right">Author Add</button>
+
+
+
+    }
+
+
+
+
+
+
+</div>
+

@@ -1,0 +1,425 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB5536A5-7EB5-4CD6-B429-086D874E87F0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library_System.UI</RootNamespace>
+    <AssemblyName>Library_System.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Theme\web3\404.html" />
+    <Content Include="Theme\web3\blank.html" />
+    <Content Include="Theme\web3\buttons.html" />
+    <Content Include="Theme\web3\calendar.html" />
+    <Content Include="Theme\web3\charts.html" />
+    <Content Include="Theme\web3\css\basictable.css" />
+    <Content Include="Theme\web3\css\bootstrap.css" />
+    <Content Include="Theme\web3\css\circles.css" />
+    <Content Include="Theme\web3\css\component.css" />
+    <Content Include="Theme\web3\css\export.css" />
+    <Content Include="Theme\web3\css\flipclock.css" />
+    <Content Include="Theme\web3\css\font-awesome.css" />
+    <Content Include="Theme\web3\css\jQuery-plugin-progressbar1.css" />
+    <Content Include="Theme\web3\css\monthly.css" />
+    <Content Include="Theme\web3\css\style.css" />
+    <Content Include="Theme\web3\css\style_grid.css" />
+    <Content Include="Theme\web3\css\table-style.css" />
+    <Content Include="Theme\web3\faq.html" />
+    <Content Include="Theme\web3\fonts\fontawesome-webfont.svg" />
+    <Content Include="Theme\web3\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Theme\web3\grids.html" />
+    <Content Include="Theme\web3\icons.html" />
+    <Content Include="Theme\web3\images\a1.jpg" />
+    <Content Include="Theme\web3\images\a2.jpg" />
+    <Content Include="Theme\web3\images\a3.jpg" />
+    <Content Include="Theme\web3\images\a4.jpg" />
+    <Content Include="Theme\web3\images\admin.jpg" />
+    <Content Include="Theme\web3\images\bottom.jpg" />
+    <Content Include="Theme\web3\images\overlay.png" />
+    <Content Include="Theme\web3\images\pic.jpg" />
+    <Content Include="Theme\web3\images\pic1.jpg" />
+    <Content Include="Theme\web3\images\profile.jpg" />
+    <Content Include="Theme\web3\images\profile_bg.jpg" />
+    <Content Include="Theme\web3\images\progress.jpg" />
+    <Content Include="Theme\web3\index.html" />
+    <Content Include="Theme\web3\input.html" />
+    <Content Include="Theme\web3\js\amcharts.js" />
+    <Content Include="Theme\web3\js\bars.js" />
+    <Content Include="Theme\web3\js\bootstrap-3.1.1.min.js" />
+    <Content Include="Theme\web3\js\Chart.min.js" />
+    <Content Include="Theme\web3\js\circles.js" />
+    <Content Include="Theme\web3\js\classie.js" />
+    <Content Include="Theme\web3\js\contact_me.js" />
+    <Content Include="Theme\web3\js\export.js" />
+    <Content Include="Theme\web3\js\flipclock.js" />
+    <Content Include="Theme\web3\js\gauge.js" />
+    <Content Include="Theme\web3\js\gnmenu.js" />
+    <Content Include="Theme\web3\js\jqBootstrapValidation.js" />
+    <Content Include="Theme\web3\js\jquery-2.1.4.min.js" />
+    <Content Include="Theme\web3\js\jQuery-plugin-progressbar.js" />
+    <Content Include="Theme\web3\js\jquery.basictable.min.js" />
+    <Content Include="Theme\web3\js\jquery.nicescroll.js" />
+    <Content Include="Theme\web3\js\light.js" />
+    <Content Include="Theme\web3\js\modernizr.custom.js" />
+    <Content Include="Theme\web3\js\monthly.js" />
+    <Content Include="Theme\web3\js\pie.js" />
+    <Content Include="Theme\web3\js\prettymaps.js" />
+    <Content Include="Theme\web3\js\radar.js" />
+    <Content Include="Theme\web3\js\screenfull.js" />
+    <Content Include="Theme\web3\js\scripts.js" />
+    <Content Include="Theme\web3\js\serial.js" />
+    <Content Include="Theme\web3\js\skycons.js" />
+    <Content Include="Theme\web3\js\valida.2.1.6.min.js" />
+    <Content Include="Theme\web3\js\validator.min.js" />
+    <Content Include="Theme\web3\js\xy.js" />
+    <Content Include="Theme\web3\main-page.html" />
+    <Content Include="Theme\web3\maps.html" />
+    <Content Include="Theme\web3\signin.html" />
+    <Content Include="Theme\web3\signup.html" />
+    <Content Include="Theme\web3\table.html" />
+    <Content Include="Theme\web3\typo.html" />
+    <Content Include="Theme\web3\validation.html" />
+    <Content Include="Theme\web3\w3layouts-License.txt" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Image\0000000058245-1.jpg" />
+    <Content Include="Image\0000000058246-1.jpg" />
+    <Content Include="Image\0000000411500-1.jpg" />
+    <Content Include="Image\0001788076001-1.jpg" />
+    <Content Include="Image\resized_954ea-12044113mansetc.jpg" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Theme\assets\img\bg-masthead.jpg" />
+    <Content Include="Theme\assets\img\favicon.ico" />
+    <Content Include="Theme\assets\img\portfolio\fullsize\1.jpg" />
+    <Content Include="Theme\assets\img\portfolio\fullsize\2.jpg" />
+    <Content Include="Theme\assets\img\portfolio\fullsize\3.jpg" />
+    <Content Include="Theme\assets\img\portfolio\fullsize\4.jpg" />
+    <Content Include="Theme\assets\img\portfolio\fullsize\5.jpg" />
+    <Content Include="Theme\assets\img\portfolio\fullsize\6.jpg" />
+    <Content Include="Theme\assets\img\portfolio\thumbnails\1.jpg" />
+    <Content Include="Theme\assets\img\portfolio\thumbnails\2.jpg" />
+    <Content Include="Theme\assets\img\portfolio\thumbnails\3.jpg" />
+    <Content Include="Theme\assets\img\portfolio\thumbnails\4.jpg" />
+    <Content Include="Theme\assets\img\portfolio\thumbnails\5.jpg" />
+    <Content Include="Theme\assets\img\portfolio\thumbnails\6.jpg" />
+    <Content Include="Theme\Chart\web2\css\bootstrap.css" />
+    <Content Include="Theme\Chart\web2\css\clndr.css" />
+    <Content Include="Theme\Chart\web2\css\jqvmap.css" />
+    <Content Include="Theme\Chart\web2\css\nav.css" />
+    <Content Include="Theme\Chart\web2\css\style.css" />
+    <Content Include="Theme\Chart\web2\images\ar2.png" />
+    <Content Include="Theme\Chart\web2\images\arrows.png" />
+    <Content Include="Theme\Chart\web2\images\avatar.jpg" />
+    <Content Include="Theme\Chart\web2\images\avatar1.jpg" />
+    <Content Include="Theme\Chart\web2\images\avatar2.jpg" />
+    <Content Include="Theme\Chart\web2\images\img-sprite.png" />
+    <Content Include="Theme\Chart\web2\images\into.png" />
+    <Content Include="Theme\Chart\web2\images\into1.png" />
+    <Content Include="Theme\Chart\web2\images\logo.png" />
+    <Content Include="Theme\Chart\web2\images\pp.jpg" />
+    <Content Include="Theme\Chart\web2\images\pp0.jpg" />
+    <Content Include="Theme\Chart\web2\images\pp01.jpg" />
+    <Content Include="Theme\Chart\web2\images\settings.png" />
+    <Content Include="Theme\Chart\web2\images\tick-mark.png" />
+    <Content Include="Theme\Chart\web2\index.html" />
+    <Content Include="Theme\Chart\web2\js\Chart1.js" />
+    <Content Include="Theme\Chart\web2\js\clndr.js" />
+    <Content Include="Theme\Chart\web2\js\easyResponsiveTabs.js" />
+    <Content Include="Theme\Chart\web2\js\jquery.easydropdown.js" />
+    <Content Include="Theme\Chart\web2\js\jquery.min.js" />
+    <Content Include="Theme\Chart\web2\js\jquery.nicescroll.js" />
+    <Content Include="Theme\Chart\web2\js\jquery.vmap.js" />
+    <Content Include="Theme\Chart\web2\js\jquery.vmap.sampledata.js" />
+    <Content Include="Theme\Chart\web2\js\jquery.vmap.world.js" />
+    <Content Include="Theme\Chart\web2\js\main.js" />
+    <Content Include="Theme\Chart\web2\js\moment-2.2.1.js" />
+    <Content Include="Theme\Chart\web2\js\site.js" />
+    <Content Include="Theme\Chart\web2\js\underscore-min.js" />
+    <Content Include="Theme\Chart\web2\resimler\book1.jpg" />
+    <Content Include="Theme\Chart\web2\resimler\book2.jpg" />
+    <Content Include="Theme\Chart\web2\resimler\book3.jpg" />
+    <Content Include="Theme\Chart\web2\resimler\book4.jpg" />
+    <Content Include="Theme\Chart\web2\resimler\book5.jpg" />
+    <Content Include="Theme\Chart\web2\resimler\img1.jpg" />
+    <Content Include="Theme\Chart\web2\w3layouts-License.txt" />
+    <Content Include="Theme\css\styles.css" />
+    <Content Include="Theme\index.html" />
+    <Content Include="Theme\js\scripts.js" />
+    <Content Include="Theme\Weather\webhava\css\style.css" />
+    <Content Include="Theme\Weather\webhava\images\bg.jpg" />
+    <Content Include="Theme\Weather\webhava\images\img1.jpg" />
+    <Content Include="Theme\Weather\webhava\index.html" />
+    <Content Include="Theme\Weather\webhava\js\jquery-2.1.4.min.js" />
+    <Content Include="Theme\Weather\webhava\js\skycons.js" />
+    <Content Include="Theme\Weather\webhava\w3layouts-License.txt" />
+    <Content Include="Theme\weblogin\css\fontawesome-all.css" />
+    <Content Include="Theme\weblogin\css\style.css" />
+    <Content Include="Theme\weblogin\images\cover4.jpg" />
+    <Content Include="Theme\weblogin\index.html" />
+    <Content Include="Theme\weblogin\w3layouts-License.txt" />
+    <Content Include="Theme\weblogin\webfonts\fa-brands-400.svg" />
+    <Content Include="Theme\weblogin\webfonts\fa-regular-400.svg" />
+    <Content Include="Theme\weblogin\webfonts\fa-solid-900.svg" />
+    <Content Include="Theme\webregister\css\font-awesome.css" />
+    <Content Include="Theme\webregister\css\style.css" />
+    <Content Include="Theme\webregister\fonts\fontawesome-webfont.svg" />
+    <Content Include="Theme\webregister\images\bg.jpg" />
+    <Content Include="Theme\webregister\index.html" />
+    <Content Include="Theme\webregister\w3layouts-License.txt" />
+    <Content Include="Web.config" />
+    <Content Include="Theme\web3\fonts\fontawesome-webfont.eot" />
+    <Content Include="Theme\web3\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Theme\web3\fonts\fontawesome-webfont.woff" />
+    <Content Include="Theme\web3\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Theme\web3\fonts\FontAwesome.otf" />
+    <Content Include="Theme\web3\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Theme\web3\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Theme\web3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Theme\web3\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Theme\web3\images\Thumbs.db" />
+    <Content Include="Theme\web3\js\js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ActionStatusController.cs" />
+    <Compile Include="Controllers\AuthorController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MembersController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\PersonelController.cs" />
+    <Compile Include="Controllers\StatisticsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <None Include="packages.config" />
+    <Content Include="Views\Shared\Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\CategoryAdd.cshtml" />
+    <Content Include="Views\Category\Update.cshtml" />
+    <Content Include="Views\Author\Index.cshtml" />
+    <Content Include="Views\Author\AuthorAdd.cshtml" />
+    <Content Include="Views\Author\Update.cshtml" />
+    <Content Include="Views\Book\Index.cshtml" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Book\BookAdd.cshtml" />
+    <Content Include="Views\Book\BookEdit.cshtml" />
+    <Content Include="Views\Personel\Index.cshtml" />
+    <Content Include="Views\Personel\PersonelAdd.cshtml" />
+    <Content Include="Views\Personel\PersonelEdit.cshtml" />
+    <Content Include="Views\Members\Index.cshtml" />
+    <Content Include="Views\Members\MembersAdd.cshtml" />
+    <Content Include="Views\Members\MembersUpdate.cshtml" />
+    <Content Include="Views\ActionStatus\GiveToBook.cshtml" />
+    <Content Include="Views\ActionStatus\Index.cshtml" />
+    <Content Include="Views\ActionStatus\TurnBook.cshtml" />
+    <Content Include="Views\ActionStatus\TurnIndex.cshtml" />
+    <Content Include="Views\Statistics\Index.cshtml" />
+    <Content Include="Views\Shared\AdminLayout.cshtml" />
+    <Content Include="Views\Statistics\Weather.cshtml" />
+    <Content Include="Views\Statistics\WeatherCard.cshtml" />
+    <Content Include="Views\Statistics\LinqCard.cshtml" />
+    <Content Include="Theme\weblogin\webfonts\fa-brands-400.eot" />
+    <Content Include="Theme\weblogin\webfonts\fa-brands-400.ttf" />
+    <Content Include="Theme\weblogin\webfonts\fa-brands-400.woff" />
+    <Content Include="Theme\weblogin\webfonts\fa-brands-400.woff2" />
+    <Content Include="Theme\weblogin\webfonts\fa-regular-400.eot" />
+    <Content Include="Theme\weblogin\webfonts\fa-regular-400.ttf" />
+    <Content Include="Theme\weblogin\webfonts\fa-regular-400.woff" />
+    <Content Include="Theme\weblogin\webfonts\fa-regular-400.woff2" />
+    <Content Include="Theme\weblogin\webfonts\fa-solid-900.eot" />
+    <Content Include="Theme\weblogin\webfonts\fa-solid-900.ttf" />
+    <Content Include="Theme\weblogin\webfonts\fa-solid-900.woff" />
+    <Content Include="Theme\weblogin\webfonts\fa-solid-900.woff2" />
+    <Content Include="Theme\webregister\fonts\fontawesome-webfont.eot" />
+    <Content Include="Theme\webregister\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Theme\webregister\fonts\fontawesome-webfont.woff" />
+    <Content Include="Theme\webregister\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Theme\webregister\fonts\FontAwesome.otf" />
+    <Content Include="Theme\webregister\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Theme\webregister\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
+    <Content Include="Views\Login\Information.cshtml" />
+    <Content Include="Views\Login\InformationUpdate.cshtml" />
+    <Content Include="Views\Message\Index.cshtml" />
+    <Content Include="Views\Message\NewMessage.cshtml" />
+    <Content Include="Views\Message\SubMessage.cshtml" />
+    <Content Include="Views\Author\AuthorBook.cshtml" />
+    <Content Include="Views\Members\PastBook.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libary_System.Business\Libary_System.Business.csproj">
+      <Project>{79df8233-4fdf-4bc4-ac98-40dd5c579d07}</Project>
+      <Name>Libary_System.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libary_System.Entities\Libary_System.Entities.csproj">
+      <Project>{02533238-e5e6-4bbb-9c48-52bf1f5b63de}</Project>
+      <Name>Libary_System.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50730</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50730/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

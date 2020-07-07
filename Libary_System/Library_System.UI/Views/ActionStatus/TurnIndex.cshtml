@@ -1,0 +1,69 @@
+﻿@model List<Libary_System.Entities.ORM.Entities.Concrete.ActionStatus>
+@{
+    ViewBag.Title = "TurnIndex";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2>Book List</h2>
+
+    <table class="table table-bordered">
+        <thead>
+
+            <tr>
+
+                <th>Member ID</th>
+                <th>Book ID</th>
+                <th>Personel ID</th>
+                <th>Give Date</th>
+                <th>Book Date</th>
+                <th>Status</th>
+
+
+
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+
+                    <td>@item.Member.FirstName</td>
+                    <td>@item.Book.BookName</td>
+                    <td>@item.Personel.PersonalName</td>
+                    <td>@Convert.ToDateTime(@item.GiveDate).ToString("dd/MM/yyyy")</td>
+                    <td>@Convert.ToDateTime(@item.BookDate).ToString("dd/MM/yyyy")</td>
+                    <td>@item.Status</td>
+
+
+
+
+
+
+
+
+                </tr>
+
+            }
+
+        </tbody>
+
+
+
+
+
+
+
+    </table>
+
+
+
+
+
+
+</div>
+

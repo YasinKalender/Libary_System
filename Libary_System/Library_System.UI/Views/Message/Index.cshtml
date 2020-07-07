@@ -1,0 +1,59 @@
+﻿@model List<Libary_System.Entities.ORM.Entities.Concrete.Message>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container">
+
+    <h2>Message</h2>
+
+    <table class="table table-bordered">
+
+
+        <thead>
+            <tr>
+                <th>Gönderen</th>
+                <th>Konu</th>
+                <th>Mesaj</th>
+                <th></th>
+
+
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>@item.Gönderen</td>
+                    <td>@item.Konu</td>
+                    <td>@item.Icerik</td>
+                    <td></td>
+                </tr>
+
+            }
+
+
+
+
+
+
+
+        </tbody>
+
+
+
+    </table>
+
+    @Html.ActionLink("New Message", "NewMessage", "Message", new { }, new { @class = "btn btn-primary" })
+
+
+</div>
+
+

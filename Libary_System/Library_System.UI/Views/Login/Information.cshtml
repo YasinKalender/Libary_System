@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Information";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container">
+
+    <h2>My Information</h2>
+
+
+
+    <input type="hidden" name="@Session["ID"]" />
+
+    <table class="table table-hover">
+
+
+        <tr>
+
+            <td>Mail: @HttpContext.Current.User.Identity.Name</td>
+        </tr>
+
+        <tr>
+
+            <td>Name:@Session["Ad"].ToString()</td>
+        </tr>
+
+        <tr>
+
+            <td>Password:@Session["Password"].ToString()</td>
+        </tr>
+
+        <tr>
+
+            <td>Last Name: @Session["LastName"].ToString()</td>
+        </tr>
+
+        <tr>
+
+            <td>UserName:@Session["UserName"].ToString()</td>
+        </tr>
+
+        <tr>
+
+            <td>Telephone: @Session["Telephone"].ToString() </td>
+        </tr>
+
+        <tr>
+
+            <td>Image</td>
+        </tr>
+
+        <tr>
+
+            <td>@Html.ActionLink("Update", "InformationUpdate", "Login", new { id = Session["ID"] }, new { @class = "btn btn-warning" })</td>
+        </tr>
+
+
+
+
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+

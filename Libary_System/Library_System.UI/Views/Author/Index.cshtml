@@ -1,0 +1,78 @@
+﻿@model List<Libary_System.Entities.ORM.Entities.Concrete.Author>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+    <div class="container">
+        <h2>Author List</h2>
+
+        <a href="/Author/AuthorAdd" class="btn btn-dark mb-3">Author Add</a>
+
+        <table class="table table-bordered">
+
+            <thead>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Add Date</th>
+                    <th>Update Date</th>
+                    <th>Add User</th>
+                    <th>Update User</th>
+                    <th></th>
+                    <th></th>
+
+
+                </tr>
+
+
+            </thead>
+
+            <tbody>
+
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.FirstName</td>
+                        <td>@item.LastName</td>
+                        <td>@item.AddDate</td>
+                        <td>@item.UpdateDate</td>
+                        <td>@item.AddUser</td>
+                        <td>@item.UpdateUser</td>
+                        <td>@Html.ActionLink("Author Delete","Delete","Author",new {id=item.ID },new {@class="btn btn-danger btn-sm",onclick="return confirm('Silmek istiyor musunuz ?')" })
+                        | @Html.ActionLink("Author Update","Update","Author",new { id=item.ID},new {@class="btn btn-primary btn-sm"})
+                        </td>
+                        <td> @Html.ActionLink("Author Details", "AuthorBook", "Author", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" })</td>
+                        
+                    </tr>
+
+                }
+
+
+
+
+
+
+            </tbody>
+
+
+
+
+
+
+
+
+
+
+        </table>
+
+
+
+    </div>
+
+
+
